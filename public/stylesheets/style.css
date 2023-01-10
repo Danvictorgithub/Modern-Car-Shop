@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+  --main-red: #D22E2E;
+}
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+.wrapper {
+  margin-right: auto; /* 1 */
+  margin-left:  auto; /* 1 */
+  max-width: 1360px; /* 2 */
+}
+.container {
+  display: flex;
+  flex-flow: column;
+  min-height: 100%;
+}
+.mainHero {
+  /* background-image: url(../images/mainHeroImage.jpeg); */
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(45, 45, 45, 0.73)),
+    url('../images/mainHeroImage.jpeg');
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  color:white;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex:0 1 auto;
+}
+.titleGroup {
+  padding: 1vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0 1rem;
+}
+.fRed {
+  color:var(--main-red);
+}
+.heroButton {
+  border:0;
+  padding: 12px 24px;
+  font-size: 1rem;
+  color:white;
+  background-color: var(--main-red);
+  border: 2px solid transparent;
+}
+.heroButton:hover {
+  background-color: white;
+  color:red;
+}
+.heroButton:active {
+  margin-top: 1vh;
+  border: 2px solid var(--main-red);
+  background-color: transparent;
+  color:white;
+}
+.mainHero > * {
+  margin: 0.5vh 10%;
+  text-align: center;
+}
+.showcase {
+  padding: 1.2%;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  
+}
+.showcase > * {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:1%;
+  padding: 2% 1.4%;
+}
+.showcaseItem h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.container .header {
+  height: 85px;
+  position: sticky;
+  top: 0;
+  background-color:white;
+}
+.container .header div{
+  flex: 0 1 auto;
+  width: 100%;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.mLogo {
+  border-bottom: 4px solid var(--main-red);
+  margin-left: 6vw;
+}
+.container .header ul {
+  flex: 0;
+  display:flex;
+  margin-right: 6vw;
+}
+.container .header ul li{
+  list-style-type: none;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.container .content {
+  flex: 1;}
+.container .footer {
+  margin-top:24px;
+  flex: 0 1 76px;
+  background-color: #141414;
+  color:white;
+}
+.catalogueHeader {
+  width: 100%;
+  background-color: #F5F5F5;
+}
+.catalogueHeader .wrapper {
+  height: 70px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2vh 0;
+  font-size: 1.2rem;
+}
+.catalogueHeader .wrapper h2 {
+  padding: 0 6vw;
+}
+.catalogueContent {
+  
+}
+.catalogueContent .wrapper{
+  display:grid;
+  grid-template-columns: 1fr 2.8fr;
+  height: 100%;
+}
+.catalogueSideBar {
+  padding: 16px 6vw;
+}
+.catalogueSideBar h3 {
+  padding-bottom: 24px;
+}
+.catalogueSideBar ul {
+  padding: 0 0 0 4vw ;
+  list-style-type: none;
+}
+.catalogueSideBar ul li {
+  padding-bottom: 10px;
+  font-weight:500;
+}
+.catalogueSideBar ul li:hover {
+  font-weight: 800;
+}
+
+.catalogueItems {
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 4%;
+  padding: 1vh 6vw 1vh 0;
+}
+.catalogueItems > * {
+  border: 2px solid black;
+  height: 400px;
+}
+.catalogueItem img {
+  width:100%;
+  height: 50%;
+  object-fit: cover;
+}
+a {
+  text-decoration: none;
+  color:black;
+}
+.catalogueItem h3 {
+  text-align: center;
+  margin:12px;
+}
+.catalogueItem p {
+  text-align: center;
+}
+@media (max-width:600px) {
+  .catalogueItems {
+    grid-template-columns: 1fr;
+    grid-template-rows: grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+/*//*/
+.containerHome div.wrapper > *{
+  padding: 0 3vw;
+}
+.containerHomeHero {
+  height: 50vw;
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(45, 45, 45, 0.73)),
+    url('../images/homebackground.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.containerHome div.wrapper {
+  display:grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr;
+  height: inherit;
+  justify-content: center;
+  align-items: center;
+}
+.containerHomeHero-img {
+  grid-column: 1 / 2;
+  grid-row: 1 / 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containerHomeHero-img img{
+  height: auto;
+  width: 100%;
+}
+.containerHomeHero-desc {
+  height: 100%;
+  grid-column: 2 / 3;
+  grid-row: 1 / 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.containerHomeHero-desc h2 {
+  font-size: 2rem;
+}
+.containerHomeHero-desc p {
+  font-size: 1.5rem;
+  margin-top: 24px;
+}
+@media (max-width:600px) {
+  .containerHome div.wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .containerHomeHero-img {
+    grid-column: 1 / 1;
+    grid-row: 1 / 2;
+  }
+  .containerHomeHero-img img{
+    width: 75%;
+  }
+  .containerHomeHero-desc {
+    height: 100%;
+    justify-content: flex-start;
+    grid-column: 1 / 1;
+    grid-row: 2 / 3;
+  }
+  .containerHomeHero-desc h2 {
+    font-size: 2rem;
+  }
+  .containerHomeHero-desc p {
+    font-size: 1rem;
+    margin-top: 24px;
+  }
+  .containerHomeHero {
+    height: 60vh;
+  }
+}
+div.wrapper.text h2{
+/*  margin-top: 24px;*/
+  margin: 3vh 3vw;
+  color: var(--main-red);
+}
+div.wrapper.text h2 u {
+  text-decoration-color: black;
+}
+div.wrapper.text h2 {
+  width:auto;
+  font-size: 3rem;
+  
+}
+.containerHomeContent div.wrapper.group {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2vw;
+  padding: 4vh 6vw;
+}
+.containerHomeContent div.wrapper.group > * {
+  height: 300px;
+/*  border:2px solid black;*/
+  display:flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 36px;
+}
+div.wrapper.group h3 {
+  font-size: 2.5rem;
+  color:white;
+}
+.g1 {
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(45, 45, 45, 0.73)),
+    url('../images/carbrand.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.g2 {
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(45, 45, 45, 0.73)),
+    url('../images/car.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.g3 {
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(45, 45, 45, 0.73)),
+    url('../images/cartype.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.searchQuery {
+  color: #454545;
+  font-weight: 800;
+}
+.autoPadding {
+  padding: 0 6vw;
+}
+.fullWidth {
+  width: 100%;
+}
+.carDetailsHeader div.wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2vh 6vw;
+  font-size: 1.2rem;
+}
+.carDetails {
+  flex: 1;
+  display:flex;
+  flex-direction: column;
+}
+.carDetailsContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.carDetailsContent div.wrapper {
+  flex: 1;
+  width: 100%;
+  display: flex;
+}
+.carDetailsContentGrid {
+  max-height: 400px;
+  width:100%;
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+.leftContent, .rightContent {
+  border: 1px solid black;
+}
+.leftContent {
+  width: 100%;
+  overflow:hidden;
+  display: flex;
+}
+.leftContent img {
+  width: 100%;
+  height:auto;
+  object-fit: cover;
+  object-position: center;
+}
+.rightContent {
+  height: 100%;
+  padding: 2.5vw;
+}
+.rightContent h1 {
+  font-size: 3rem;
+}
+.carDetailsHeader {
+  height: 70px;
+  background-color: #F5F5F5;
+  color: #454545;
+}
+.lists {
+  list-style-type: square;
+}
+.lists li {
+  margin-bottom:12px;
+  font-size: 2rem;
+}
+div.autoPadding.content > * {
+}
+div.autoPadding.content a {
+/*  max-width:100px;*/
+  display:block;
+  border: 2px solid black;
+  padding: 12px 24px;
+}
+.deleteList li {
+  width: 200px;
+  border: 1px solid #F5F5F5;
+}
+.formDelete {
+  display:block;
+  border: 2px solid black;
+  padding: 12px 24px;
+  background-color: white;
+}
+.dbImage {
+  max-width: 400px;
+}
+.createButton {
+  margin: 8px 0;
+  padding:12px 24px;
+  border: 4px solid black;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: white;
+}

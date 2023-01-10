@@ -1,0 +1,29 @@
+extends cataloguelayout
+
+block container
+	div.containerHome
+		div.containerHomeHero
+			div.wrapper
+				div.containerHomeHero-desc
+					h2 Cars with brand-new 
+							span.fRed Quality
+					p Get your car now, with limited discount offer and fast shipping to your home. 
+				div.containerHomeHero-img
+					img(src="/images/car-home.png")
+		div.containerHomeContent
+			div.wrapper.text
+				h2 
+					u Search By
+					| :
+			div.wrapper.group
+				a.g1(href="/catalogue/shop/brands")
+					div
+						h3 Brands
+				a.g2(href="/catalogue/shop/cars")
+					div
+						h3 Cars
+				a.g3(href="/catalogue/shop/cartypes")
+					div
+						h3 CarTypes
+
+		

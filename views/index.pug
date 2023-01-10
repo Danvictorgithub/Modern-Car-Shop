@@ -1,0 +1,26 @@
+//- title
+//- brandsCount
+//- carsCount
+//- cartypesCount
+extends layout
+
+block content
+  div.container
+    div.mainHero
+      h3 Best Car Brands at your Reach
+      div.titleGroup
+        h1 Welcome To
+        h1.fRed=title
+      p The Car Business, where latest vehicles are available to any parts of the world.
+      a(href='/catalogue')
+        button.heroButton Check Now!
+    div.showcase
+      div.showcaseItem
+        h3= brandsCount
+        h2 Brands
+      div.showcaseItem
+        h3= carsCount
+        h2 Cars
+      div.showcaseItem
+        h3= cartypesCount
+        h2 Car Types

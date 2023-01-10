@@ -1,0 +1,26 @@
+extends cataloguelayout
+
+block container
+    div.catalogueHeader
+        div.wrapper
+            h2.searchQuery=searchQuery 
+    div.catalogueContent
+        div.wrapper
+            div.catalogueSideBar
+                h3 CATEGORIES 
+                ul
+                    li 
+                        a(href="/catalogue/shop/brands") Brands
+                    li 
+                        a(href="/catalogue/shop/cars") Cars
+                    li 
+                        a(href="/catalogue/shop/cartypes") Car Type
+            div.catalogueItems
+                if (cars != undefined)
+                    for car in cars
+                        div.catalogueItem
+                            a(href=car.url)
+                                img(src= car.imgurl)
+                            h3 #{car.brand.name} #{car.name}
+                            h3=car.car_type.name
+                            p #{car.description}
